@@ -228,9 +228,10 @@ void draw(){
    }
  
   //各種制御値
+  println("顔移動キー　wasd"); 
   println("自動制御(nキー)、手動制御(mキー) 現在は自動モード:"+flag); 
-  println("目標位置 "+px,py,pz);
   println("頭の角度 "+headx,heady);
+  println("目標位置 "+px,py,pz);
   println("目標の角度 "+angle0a,angle1a,angle2a);
   println("実際の角度 "+radians(angle0),radians(angle1),radians(angle2));
 }
