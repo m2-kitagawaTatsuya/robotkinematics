@@ -142,8 +142,8 @@ void draw(){
   if (heady == -41){
     heady = -40;
   }
-  if (headx == 1){
-    headx = 0;
+  if (headx == 6){
+    headx = 5;
   }
   if (headx == -11){
     headx = -10;
@@ -189,7 +189,7 @@ void draw(){
   //auto angle calc   
   px = -6*sin(radians(2*heady));
   py = 6*sin(radians(-2*headx))+7.5;
-  pz = 6*cos(radians(2*heady));
+  pz = 6*cos(radians(2*heady))-6*(1-cos(radians(2*headx)));
   angle2a= acos((sq(px)+sq(py)+sq((pz-l1))-sq(l3)-sq(l3a)-sq(l2))/(2*l2*l3));
   angle1a= asin((l1-pz)/sqrt(sq(px)+sq(py)+sq((pz-l1))-sq(l3a)))+atan((l2+cos(angle2a)*l3)/(sin(angle2a)*l3));
   A = sin(angle1a)*l2+sin(angle1a)*cos(angle2a)*l3+cos(angle1a)*sin(angle2a)*l3;
